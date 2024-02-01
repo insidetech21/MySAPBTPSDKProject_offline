@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".mdui.outpicking1set.OUTPICKING1SetActivity">
+    <data>
+        <import type = "com.sap.cloud.android.odata.zcims_int_srv_entities.OutPicking1" />
+        <variable name="outPicking1" type="OutPicking1"/>
+        <variable name="handler" type="com.company.mysapbtpsdkproject.mdui.outpicking1set.OUTPICKING1SetDetailFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Vbeln"
+            app:valueText="@{outPicking1.getOptionalValue(OutPicking1.vbeln).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Name1"
+            app:valueText="@{outPicking1.getOptionalValue(OutPicking1.name1).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Lgort"
+            app:valueText="@{outPicking1.getOptionalValue(OutPicking1.lgort).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Vbtyp"
+            app:valueText="@{outPicking1.getOptionalValue(OutPicking1.vbtyp).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Auart"
+            app:valueText="@{outPicking1.getOptionalValue(OutPicking1.auart).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Kunnr"
+            app:valueText="@{outPicking1.getOptionalValue(OutPicking1.kunnr).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Erdat"
+            app:valueText="@{outPicking1.getOptionalValue(OutPicking1.erdat).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Charg"
+            app:valueText="@{outPicking1.getOptionalValue(OutPicking1.charg).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Clabs"
+            app:valueText="@{outPicking1.getOptionalValue(OutPicking1.clabs).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Hsdat"
+            app:valueText="@{outPicking1.getOptionalValue(OutPicking1.hsdat).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Vfdat"
+            app:valueText="@{outPicking1.getOptionalValue(OutPicking1.vfdat).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Matnr"
+            app:valueText="@{outPicking1.getOptionalValue(OutPicking1.matnr).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Arktx"
+            app:valueText="@{outPicking1.getOptionalValue(OutPicking1.arktx).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Lfgsk"
+            app:valueText="@{outPicking1.getOptionalValue(OutPicking1.lfgsk).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Delivery"
+            app:valueText="@{outPicking1.getOptionalValue(OutPicking1.delivery).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Posnr"
+            app:valueText="@{outPicking1.getOptionalValue(OutPicking1.posnr).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Lfimg"
+            app:valueText="@{outPicking1.getOptionalValue(OutPicking1.lfimg).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Posnn"
+            app:valueText="@{outPicking1.getOptionalValue(OutPicking1.posnn).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Pikmg"
+            app:valueText="@{outPicking1.getOptionalValue(OutPicking1.pikmg).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Lgmng"
+            app:valueText="@{outPicking1.getOptionalValue(OutPicking1.lgmng).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Werks"
+            app:valueText="@{outPicking1.getOptionalValue(OutPicking1.werks).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Kwmeng"
+            app:valueText="@{outPicking1.getOptionalValue(OutPicking1.kwmeng).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Vstel"
+            app:valueText="@{outPicking1.getOptionalValue(OutPicking1.vstel).toString()}" />
+
+    </LinearLayout>
+</layout>

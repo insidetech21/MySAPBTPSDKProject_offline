@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".mdui.intsloctoslocset.IntSlocToSlocSetActivity">
+    <data>
+        <import type = "com.sap.cloud.android.odata.zcims_int_srv_entities.IntSlocToSloc" />
+        <variable name="intSlocToSloc" type="IntSlocToSloc"/>
+        <variable name="handler" type="com.company.mysapbtpsdkproject.mdui.intsloctoslocset.IntSlocToSlocSetDetailFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Matnr"
+            app:valueText="@{intSlocToSloc.getOptionalValue(IntSlocToSloc.matnr).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Rsnum"
+            app:valueText="@{intSlocToSloc.getOptionalValue(IntSlocToSloc.rsnum).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Xwaok"
+            app:valueText="@{intSlocToSloc.getOptionalValue(IntSlocToSloc.xwaok).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Bdart"
+            app:valueText="@{intSlocToSloc.getOptionalValue(IntSlocToSloc.bdart).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Maktx"
+            app:valueText="@{intSlocToSloc.getOptionalValue(IntSlocToSloc.maktx).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Bwart"
+            app:valueText="@{intSlocToSloc.getOptionalValue(IntSlocToSloc.bwart).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Rsdat"
+            app:valueText="@{intSlocToSloc.getOptionalValue(IntSlocToSloc.rsdat).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Rspos"
+            app:valueText="@{intSlocToSloc.getOptionalValue(IntSlocToSloc.rspos).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Charg"
+            app:valueText="@{intSlocToSloc.getOptionalValue(IntSlocToSloc.charg).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Sgtxt"
+            app:valueText="@{intSlocToSloc.getOptionalValue(IntSlocToSloc.sgtxt).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Umlgo"
+            app:valueText="@{intSlocToSloc.getOptionalValue(IntSlocToSloc.umlgo).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Lgort"
+            app:valueText="@{intSlocToSloc.getOptionalValue(IntSlocToSloc.lgort).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Mblnr"
+            app:valueText="@{intSlocToSloc.getOptionalValue(IntSlocToSloc.mblnr).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="EntryQnt"
+            app:valueText="@{intSlocToSloc.getOptionalValue(IntSlocToSloc.entryQnt).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="MoveMat"
+            app:valueText="@{intSlocToSloc.getOptionalValue(IntSlocToSloc.moveMat).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="MovePlant"
+            app:valueText="@{intSlocToSloc.getOptionalValue(IntSlocToSloc.movePlant).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="MoveStloc"
+            app:valueText="@{intSlocToSloc.getOptionalValue(IntSlocToSloc.moveStloc).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="MoveBatch"
+            app:valueText="@{intSlocToSloc.getOptionalValue(IntSlocToSloc.moveBatch).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Erfmg"
+            app:valueText="@{intSlocToSloc.getOptionalValue(IntSlocToSloc.erfmg).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Meins"
+            app:valueText="@{intSlocToSloc.getOptionalValue(IntSlocToSloc.meins).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Message"
+            app:valueText="@{intSlocToSloc.getOptionalValue(IntSlocToSloc.message).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Werks"
+            app:valueText="@{intSlocToSloc.getOptionalValue(IntSlocToSloc.werks).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Clabs"
+            app:valueText="@{intSlocToSloc.getOptionalValue(IntSlocToSloc.clabs).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Umwrk"
+            app:valueText="@{intSlocToSloc.getOptionalValue(IntSlocToSloc.umwrk).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Kzear"
+            app:valueText="@{intSlocToSloc.getOptionalValue(IntSlocToSloc.kzear).toString()}" />
+
+        <RelativeLayout
+            style="@style/FioriButton.Flat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:onClick="@{handler::onNavigationClickedToIntSlocToSlocSet_npo_sloc}"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/link_label_to_npo_sloc"
+                style="@style/FioriButton.Flat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:clickable="false"
+                android:focusable="false"
+                android:paddingLeft="16dp"
+                android:text="IntSlocToSlocSet" />
+
+            <Button
+                android:id="@+id/link_button_to_npo_sloc"
+                style="@style/FioriButton.Flat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:clickable="false"
+                android:drawableStart="@drawable/ic_arrow_forward_black_24dp"
+                android:enabled="true"
+                android:visibility="invisible"
+                android:focusable="false" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

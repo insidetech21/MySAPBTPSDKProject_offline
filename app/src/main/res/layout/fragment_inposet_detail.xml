@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".mdui.inposet.INPOSetActivity">
+    <data>
+        <import type = "com.sap.cloud.android.odata.zcims_int_srv_entities.InPo" />
+        <variable name="inPo" type="InPo"/>
+        <variable name="handler" type="com.company.mysapbtpsdkproject.mdui.inposet.INPOSetDetailFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/item_detail_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Ebeln"
+                        app:valueText="@{inPo.getOptionalValue(InPo.ebeln).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Bsart"
+                        app:valueText="@{inPo.getOptionalValue(InPo.bsart).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Bstyp"
+                        app:valueText="@{inPo.getOptionalValue(InPo.bstyp).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Name1"
+                        app:valueText="@{inPo.getOptionalValue(InPo.name1).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Lifnr"
+                        app:valueText="@{inPo.getOptionalValue(InPo.lifnr).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Aedat"
+                        app:valueText="@{inPo.getOptionalValue(InPo.aedat).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Werks"
+                        app:valueText="@{inPo.getOptionalValue(InPo.werks).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Mblnr"
+                        app:valueText="@{inPo.getOptionalValue(InPo.mblnr).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="BillOfLadding"
+                        app:valueText="@{inPo.getOptionalValue(InPo.billOfLadding).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="GrGiSlipNo"
+                        app:valueText="@{inPo.getOptionalValue(InPo.grGiSlipNo).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="HeaderTxt"
+                        app:valueText="@{inPo.getOptionalValue(InPo.headerTxt).toString()}" />
+
+                    <RelativeLayout
+                        style="@style/FioriButton.Flat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:onClick="@{handler::onNavigationClickedToINPOITEMSet_Navg_Po}"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/link_label_to_navg_po"
+                            style="@style/FioriButton.Flat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="true"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:paddingLeft="16dp"
+                            android:text="INPOITEMSet" />
+
+                        <Button
+                            android:id="@+id/link_button_to_navg_po"
+                            style="@style/FioriButton.Flat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:clickable="false"
+                            android:drawableStart="@drawable/ic_arrow_forward_black_24dp"
+                            android:enabled="true"
+                            android:visibility="invisible"
+                            android:focusable="false" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </LinearLayout>
+</layout>

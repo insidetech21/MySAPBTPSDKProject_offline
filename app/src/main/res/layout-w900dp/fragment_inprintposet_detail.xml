@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".mdui.inprintposet.INPRINTPOSetActivity">
+    <data>
+        <import type = "com.sap.cloud.android.odata.zcims_int_srv_entities.InPrintPo" />
+        <variable name="inPrintPo" type="InPrintPo"/>
+        <variable name="handler" type="com.company.mysapbtpsdkproject.mdui.inprintposet.INPRINTPOSetDetailFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Mblnr"
+            app:valueText="@{inPrintPo.getOptionalValue(InPrintPo.mblnr).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Lifnr"
+            app:valueText="@{inPrintPo.getOptionalValue(InPrintPo.lifnr).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Mcod1"
+            app:valueText="@{inPrintPo.getOptionalValue(InPrintPo.mcod1).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="BudatMkpf"
+            app:valueText="@{inPrintPo.getOptionalValue(InPrintPo.budatMkpf).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Matnr"
+            app:valueText="@{inPrintPo.getOptionalValue(InPrintPo.matnr).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Maktg"
+            app:valueText="@{inPrintPo.getOptionalValue(InPrintPo.maktg).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Ebeln"
+            app:valueText="@{inPrintPo.getOptionalValue(InPrintPo.ebeln).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Ebelp"
+            app:valueText="@{inPrintPo.getOptionalValue(InPrintPo.ebelp).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Charg"
+            app:valueText="@{inPrintPo.getOptionalValue(InPrintPo.charg).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Qprint"
+            app:valueText="@{inPrintPo.getOptionalValue(InPrintPo.qprint).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Qreprint"
+            app:valueText="@{inPrintPo.getOptionalValue(InPrintPo.qreprint).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Werks"
+            app:valueText="@{inPrintPo.getOptionalValue(InPrintPo.werks).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Lgort"
+            app:valueText="@{inPrintPo.getOptionalValue(InPrintPo.lgort).toString()}" />
+
+    </LinearLayout>
+</layout>

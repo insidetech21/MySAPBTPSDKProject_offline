@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".mdui.inpoitemset.INPOITEMSetActivity">
+    <data>
+        <import type = "com.sap.cloud.android.odata.zcims_int_srv_entities.InPoItem" />
+        <variable name="inPoItem" type="InPoItem"/>
+        <variable name="handler" type="com.company.mysapbtpsdkproject.mdui.inpoitemset.INPOITEMSetDetailFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/item_detail_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Ebeln"
+                        app:valueText="@{inPoItem.getOptionalValue(InPoItem.ebeln).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Ebelp"
+                        app:valueText="@{inPoItem.getOptionalValue(InPoItem.ebelp).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Txz01"
+                        app:valueText="@{inPoItem.getOptionalValue(InPoItem.txz01).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Matnr"
+                        app:valueText="@{inPoItem.getOptionalValue(InPoItem.matnr).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Menge"
+                        app:valueText="@{inPoItem.getOptionalValue(InPoItem.menge).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Werks"
+                        app:valueText="@{inPoItem.getOptionalValue(InPoItem.werks).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Pstyp"
+                        app:valueText="@{inPoItem.getOptionalValue(InPoItem.pstyp).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Bwart"
+                        app:valueText="@{inPoItem.getOptionalValue(InPoItem.bwart).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Lgort"
+                        app:valueText="@{inPoItem.getOptionalValue(InPoItem.lgort).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Lifnr"
+                        app:valueText="@{inPoItem.getOptionalValue(InPoItem.lifnr).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Letyp"
+                        app:valueText="@{inPoItem.getOptionalValue(InPoItem.letyp).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Expdt"
+                        app:valueText="@{inPoItem.getOptionalValue(InPoItem.expdt).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Mfgdt"
+                        app:valueText="@{inPoItem.getOptionalValue(InPoItem.mfgdt).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Licha"
+                        app:valueText="@{inPoItem.getOptionalValue(InPoItem.licha).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Charg"
+                        app:valueText="@{inPoItem.getOptionalValue(InPoItem.charg).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Erfmg"
+                        app:valueText="@{inPoItem.getOptionalValue(InPoItem.erfmg).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Kzbew"
+                        app:valueText="@{inPoItem.getOptionalValue(InPoItem.kzbew).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Bldat"
+                        app:valueText="@{inPoItem.getOptionalValue(InPoItem.bldat).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Budat"
+                        app:valueText="@{inPoItem.getOptionalValue(InPoItem.budat).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Bktxt"
+                        app:valueText="@{inPoItem.getOptionalValue(InPoItem.bktxt).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Labst"
+                        app:valueText="@{inPoItem.getOptionalValue(InPoItem.labst).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Vmins"
+                        app:valueText="@{inPoItem.getOptionalValue(InPoItem.vmins).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Speme"
+                        app:valueText="@{inPoItem.getOptionalValue(InPoItem.speme).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Mblnr"
+                        app:valueText="@{inPoItem.getOptionalValue(InPoItem.mblnr).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Frbnr"
+                        app:valueText="@{inPoItem.getOptionalValue(InPoItem.frbnr).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Xabln"
+                        app:valueText="@{inPoItem.getOptionalValue(InPoItem.xabln).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Xblnr"
+                        app:valueText="@{inPoItem.getOptionalValue(InPoItem.xblnr).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="MbInsmk"
+                        app:valueText="@{inPoItem.getOptionalValue(InPoItem.mbInsmk).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="ItemText"
+                        app:valueText="@{inPoItem.getOptionalValue(InPoItem.itemText).toString()}" />
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </LinearLayout>
+</layout>

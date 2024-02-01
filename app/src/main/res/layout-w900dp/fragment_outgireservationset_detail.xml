@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".mdui.outgireservationset.OutGIReservationSetActivity">
+    <data>
+        <import type = "com.sap.cloud.android.odata.zcims_int_srv_entities.OutGIReservation" />
+        <variable name="outGIReservation" type="OutGIReservation"/>
+        <variable name="handler" type="com.company.mysapbtpsdkproject.mdui.outgireservationset.OutGIReservationSetDetailFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Matnr"
+            app:valueText="@{outGIReservation.getOptionalValue(OutGIReservation.matnr).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Maktx"
+            app:valueText="@{outGIReservation.getOptionalValue(OutGIReservation.maktx).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Rsnum"
+            app:valueText="@{outGIReservation.getOptionalValue(OutGIReservation.rsnum).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Xwaok"
+            app:valueText="@{outGIReservation.getOptionalValue(OutGIReservation.xwaok).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Bdart"
+            app:valueText="@{outGIReservation.getOptionalValue(OutGIReservation.bdart).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Bwart"
+            app:valueText="@{outGIReservation.getOptionalValue(OutGIReservation.bwart).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Kostl"
+            app:valueText="@{outGIReservation.getOptionalValue(OutGIReservation.kostl).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Anln1"
+            app:valueText="@{outGIReservation.getOptionalValue(OutGIReservation.anln1).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="PsPspPnr"
+            app:valueText="@{outGIReservation.getOptionalValue(OutGIReservation.psPspPnr).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Rsdat"
+            app:valueText="@{outGIReservation.getOptionalValue(OutGIReservation.rsdat).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Rspos"
+            app:valueText="@{outGIReservation.getOptionalValue(OutGIReservation.rspos).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Lgort"
+            app:valueText="@{outGIReservation.getOptionalValue(OutGIReservation.lgort).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Erfmg"
+            app:valueText="@{outGIReservation.getOptionalValue(OutGIReservation.erfmg).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Sgtxt"
+            app:valueText="@{outGIReservation.getOptionalValue(OutGIReservation.sgtxt).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Charg"
+            app:valueText="@{outGIReservation.getOptionalValue(OutGIReservation.charg).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Mblnr"
+            app:valueText="@{outGIReservation.getOptionalValue(OutGIReservation.mblnr).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Meins"
+            app:valueText="@{outGIReservation.getOptionalValue(OutGIReservation.meins).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Message"
+            app:valueText="@{outGIReservation.getOptionalValue(OutGIReservation.message).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Werks"
+            app:valueText="@{outGIReservation.getOptionalValue(OutGIReservation.werks).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Clabs"
+            app:valueText="@{outGIReservation.getOptionalValue(OutGIReservation.clabs).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Kzear"
+            app:valueText="@{outGIReservation.getOptionalValue(OutGIReservation.kzear).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="EntryQnt"
+            app:valueText="@{outGIReservation.getOptionalValue(OutGIReservation.entryQnt).toString()}" />
+
+        <RelativeLayout
+            style="@style/FioriButton.Flat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:onClick="@{handler::onNavigationClickedToOutGIReservationSet_npo_resv}"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/link_label_to_npo_resv"
+                style="@style/FioriButton.Flat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:clickable="false"
+                android:focusable="false"
+                android:paddingLeft="16dp"
+                android:text="OutGIReservationSet" />
+
+            <Button
+                android:id="@+id/link_button_to_npo_resv"
+                style="@style/FioriButton.Flat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:clickable="false"
+                android:drawableStart="@drawable/ic_arrow_forward_black_24dp"
+                android:enabled="true"
+                android:visibility="invisible"
+                android:focusable="false" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

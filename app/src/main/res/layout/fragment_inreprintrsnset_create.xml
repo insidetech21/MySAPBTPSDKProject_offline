@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="com.company.mysapbtpsdkproject.databinding.simplepropertyformcell.Converter"/>
+        <import type="android.view.View"/>
+        <variable name="inReprintRsn" type="com.sap.cloud.android.odata.zcims_int_srv_entities.InReprintRsn"/>
+    </data>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true">
+        <ScrollView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/create_update_inreprintrsn"
+                    android:orientation="vertical">
+
+                <com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rreasonid"
+                        android:tag="RREASON"
+                        android:maxLength="@{40}"
+                        app:key="Rreason"
+                        app:value="@={inReprintRsn.rreason}">
+                </com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

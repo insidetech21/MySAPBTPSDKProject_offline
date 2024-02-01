@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".mdui.matdetailsset.MatDetailsSetActivity">
+    <data>
+        <import type = "com.sap.cloud.android.odata.zcims_int_srv_entities.MatDetails" />
+        <variable name="matDetails" type="MatDetails"/>
+        <variable name="handler" type="com.company.mysapbtpsdkproject.mdui.matdetailsset.MatDetailsSetDetailFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Mblnr"
+            app:valueText="@{matDetails.getOptionalValue(MatDetails.mblnr).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Matnr"
+            app:valueText="@{matDetails.getOptionalValue(MatDetails.matnr).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="TagId"
+            app:valueText="@{matDetails.getOptionalValue(MatDetails.tagId).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Ebeln"
+            app:valueText="@{matDetails.getOptionalValue(MatDetails.ebeln).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Zdate"
+            app:valueText="@{matDetails.getOptionalValue(MatDetails.zdate).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Werks"
+            app:valueText="@{matDetails.getOptionalValue(MatDetails.werks).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Mcod1"
+            app:valueText="@{matDetails.getOptionalValue(MatDetails.mcod1).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Maktx"
+            app:valueText="@{matDetails.getOptionalValue(MatDetails.maktx).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="ZbinNo"
+            app:valueText="@{matDetails.getOptionalValue(MatDetails.zbinNo).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Lgort"
+            app:valueText="@{matDetails.getOptionalValue(MatDetails.lgort).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Time"
+            app:valueText="@{matDetails.getOptionalValue(MatDetails.time).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Menge"
+            app:valueText="@{matDetails.getOptionalValue(MatDetails.menge).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Vfdat"
+            app:valueText="@{matDetails.getOptionalValue(MatDetails.vfdat).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Userid"
+            app:valueText="@{matDetails.getOptionalValue(MatDetails.userid).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Meins"
+            app:valueText="@{matDetails.getOptionalValue(MatDetails.meins).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="MengeInv"
+            app:valueText="@{matDetails.getOptionalValue(MatDetails.mengeInv).toString()}" />
+
+        <RelativeLayout
+            style="@style/FioriButton.Flat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:onClick="@{handler::onNavigationClickedToMatDetailsSet_nav_mat}"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/link_label_to_nav_mat"
+                style="@style/FioriButton.Flat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:clickable="false"
+                android:focusable="false"
+                android:paddingLeft="16dp"
+                android:text="MatDetailsSet" />
+
+            <Button
+                android:id="@+id/link_button_to_nav_mat"
+                style="@style/FioriButton.Flat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:clickable="false"
+                android:drawableStart="@drawable/ic_arrow_forward_black_24dp"
+                android:enabled="true"
+                android:visibility="invisible"
+                android:focusable="false" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

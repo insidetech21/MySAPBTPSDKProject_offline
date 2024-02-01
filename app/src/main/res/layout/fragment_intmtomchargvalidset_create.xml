@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="com.company.mysapbtpsdkproject.databinding.simplepropertyformcell.Converter"/>
+        <import type="android.view.View"/>
+        <variable name="intMtomChargvalid" type="com.sap.cloud.android.odata.zcims_int_srv_entities.INTMtomChargvalid"/>
+    </data>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true">
+        <ScrollView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/create_update_intmtomchargvalid"
+                    android:orientation="vertical">
+
+                <com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/maktxid"
+                        android:tag="maktx"
+                        app:key="Maktx"
+                        app:value="@={intMtomChargvalid.maktx}">
+                </com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell>
+                <com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/chargid"
+                        android:tag="charg"
+                        app:key="Charg"
+                        app:value="@={intMtomChargvalid.charg}">
+                </com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell>
+                <com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/lgortid"
+                        android:tag="lgort"
+                        app:key="Lgort"
+                        app:value="@={intMtomChargvalid.lgort}">
+                </com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

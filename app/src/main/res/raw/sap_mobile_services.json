@@ -1,0 +1,18 @@
+{
+  "__comment": "When modifying this file, you need to reset or reinstall all current client installations",
+  "auth": [{
+      "type": "oauth2",
+      "config": {
+        "oauth2.clients": [
+
+          { "clientID": "7521d284-abc1-492a-9145-d48d1077dc10", "redirectURL": "https://aincf-ain-com-sap-crfid-crfid-demo.cfapps.eu10.hana.ondemand.com", "grantType": "authorization_code" }
+        ],
+        "oauth2.tokenEndpoint": "https://aincf-ain-com-sap-crfid-crfid-demo.cfapps.eu10.hana.ondemand.com/oauth2/api/v1/token",
+        "oauth2.authorizationEndpoint": "https://aincf-ain-com-sap-crfid-crfid-demo.cfapps.eu10.hana.ondemand.com/oauth2/api/v1/authorize"
+      },
+      "requireOtp": false
+    }],
+  "ServiceUrl" : "https://aincf-ain-com-sap-crfid-crfid-demo.cfapps.eu10.hana.ondemand.com/",
+  "appID": "com.sap.crfid.cRFID_Demo",
+  "multiUser": false
+}

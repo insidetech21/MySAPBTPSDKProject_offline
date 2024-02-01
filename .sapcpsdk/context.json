@@ -1,0 +1,19 @@
+{
+  "projectInfo": {
+    "projectName": "MySAPBTPSDKProject",
+    "createdDate": "Wednesday, January 31, 2024 at 3:45:36 PM",
+    "regenerateProxyClassDate": ""
+  },
+  "cloudApplication": {
+    "cloudApplicationId": "com.sap.crfid.cRFID_Demo",
+    "destinations": [
+      {
+        "id": "com.sap.edm.sampleservice.v2"
+      },
+      {
+        "id": "com.sap.crfid.cRFID_Demo"
+      }
+    ]
+  },
+  "msServerConfigurationName": "Vasant"
+}

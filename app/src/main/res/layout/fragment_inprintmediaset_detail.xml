@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".mdui.inprintmediaset.INPRINTMEDIASetActivity">
+    <data>
+        <import type = "com.sap.cloud.android.odata.zcims_int_srv_entities.InPrintMedia" />
+        <variable name="inPrintMedia" type="InPrintMedia"/>
+        <variable name="handler" type="com.company.mysapbtpsdkproject.mdui.inprintmediaset.INPRINTMEDIASetDetailFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/item_detail_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Mblnr"
+                        app:valueText="@{inPrintMedia.getOptionalValue(InPrintMedia.mblnr).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Ebeln"
+                        app:valueText="@{inPrintMedia.getOptionalValue(InPrintMedia.ebeln).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Ebelp"
+                        app:valueText="@{inPrintMedia.getOptionalValue(InPrintMedia.ebelp).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Matnr"
+                        app:valueText="@{inPrintMedia.getOptionalValue(InPrintMedia.matnr).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Charg"
+                        app:valueText="@{inPrintMedia.getOptionalValue(InPrintMedia.charg).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Mcod1"
+                        app:valueText="@{inPrintMedia.getOptionalValue(InPrintMedia.mcod1).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Maktx"
+                        app:valueText="@{inPrintMedia.getOptionalValue(InPrintMedia.maktx).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Meins"
+                        app:valueText="@{inPrintMedia.getOptionalValue(InPrintMedia.meins).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Lenum"
+                        app:valueText="@{inPrintMedia.getOptionalValue(InPrintMedia.lenum).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Menge"
+                        app:valueText="@{inPrintMedia.getOptionalValue(InPrintMedia.menge).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="BudatMkpf"
+                        app:valueText="@{inPrintMedia.getOptionalValue(InPrintMedia.budatMkpf).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Lifnr"
+                        app:valueText="@{inPrintMedia.getOptionalValue(InPrintMedia.lifnr).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Qprint"
+                        app:valueText="@{inPrintMedia.getOptionalValue(InPrintMedia.qprint).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Qreprint"
+                        app:valueText="@{inPrintMedia.getOptionalValue(InPrintMedia.qreprint).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Repres"
+                        app:valueText="@{inPrintMedia.getOptionalValue(InPrintMedia.repres).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Lsize"
+                        app:valueText="@{inPrintMedia.getOptionalValue(InPrintMedia.lsize).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Lgort"
+                        app:valueText="@{inPrintMedia.getOptionalValue(InPrintMedia.lgort).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Werks"
+                        app:valueText="@{inPrintMedia.getOptionalValue(InPrintMedia.werks).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Mjahr"
+                        app:valueText="@{inPrintMedia.getOptionalValue(InPrintMedia.mjahr).toString()}" />
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </LinearLayout>
+</layout>

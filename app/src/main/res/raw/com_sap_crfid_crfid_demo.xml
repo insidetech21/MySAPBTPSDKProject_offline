@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZCIMS_INT_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <Annotation Term="Core.SchemaVersion" String="1.0.0" xmlns="http://docs.oasis-open.org/odata/ns/edm"/>
+            <EntityType Name="RF_MATTAG" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="tag_id"/>
+                </Key>
+                <Property Name="werks" Type="Edm.String" MaxLength="10" sap:unicode="false"/>
+                <Property Name="mblnr" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="ebeln" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="budat_mkpf" Type="Edm.DateTime" Precision="0" sap:unicode="false" sap:label="Date"/>
+                <Property Name="matnr" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="buzei" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="meins" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="menge" Type="Edm.Decimal" Precision="31" Scale="0" sap:unicode="false"/>
+                <Property Name="zdate" Type="Edm.DateTime" Precision="0" sap:unicode="false" sap:label="Time Stamp"/>
+                <Property Name="time" Type="Edm.Time" Precision="0" sap:unicode="false"/>
+                <Property Name="userid" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="status" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="maktx" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="bstmg" Type="Edm.Decimal" Precision="31" Scale="0" sap:unicode="false"/>
+                <Property Name="tag_id" Type="Edm.String" Nullable="false" MaxLength="32" sap:unicode="false"/>
+                <Property Name="ebelp" Type="Edm.String" sap:unicode="false"/>
+                <NavigationProperty Name="rf_mattag" Relationship="ZCIMS_INT_SRV.Assoc_RF_MATTAG" FromRole="FromRole_Assoc_RF_MATTAG" ToRole="ToRole_Assoc_RF_MATTAG"/>
+            </EntityType>
+            <EntityType Name="Mat_details" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="mblnr"/>
+                    <PropertyRef Name="matnr"/>
+                </Key>
+                <Property Name="tag_id" Type="Edm.String" MaxLength="32" sap:unicode="false"/>
+                <Property Name="ebeln" Type="Edm.String" MaxLength="20" sap:unicode="false"/>
+                <Property Name="mblnr" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false"/>
+                <Property Name="matnr" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false"/>
+                <Property Name="zdate" Type="Edm.DateTime" Precision="0" sap:unicode="false" sap:label="Date"/>
+                <Property Name="werks" Type="Edm.String" MaxLength="4" sap:unicode="false"/>
+                <Property Name="mcod1" Type="Edm.String" MaxLength="10" sap:unicode="false"/>
+                <Property Name="maktx" Type="Edm.String" MaxLength="40" sap:unicode="false"/>
+                <Property Name="zbin_no" Type="Edm.String" MaxLength="20" sap:unicode="false"/>
+                <Property Name="lgort" Type="Edm.String" MaxLength="4" sap:unicode="false"/>
+                <Property Name="time" Type="Edm.Time" Precision="0" sap:unicode="false"/>
+                <Property Name="menge" Type="Edm.Decimal" Precision="31" Scale="0" sap:unicode="false"/>
+                <Property Name="vfdat" Type="Edm.DateTime" Precision="0" sap:unicode="false" sap:label="Date"/>
+                <Property Name="userid" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="meins" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="menge_inv" Type="Edm.Decimal" Precision="31" Scale="0" sap:unicode="false"/>
+                <NavigationProperty Name="nav_mat" Relationship="ZCIMS_INT_SRV.Assoc_mat_details" FromRole="FromRole_Assoc_mat_details" ToRole="ToRole_Assoc_mat_details"/>
+            </EntityType>
+            <EntityType Name="IN_PO_ITEM" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Ebeln"/>
+                </Key>
+                <Property Name="Ebeln" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false"/>
+                <Property Name="Ebelp" Type="Edm.String" MaxLength="5" sap:unicode="false"/>
+                <Property Name="Txz01" Type="Edm.String" MaxLength="40" sap:unicode="false"/>
+                <Property Name="Matnr" Type="Edm.String" MaxLength="40" sap:unicode="false"/>
+                <Property Name="Menge" Type="Edm.Decimal" Precision="13" Scale="3" sap:unicode="false"/>
+                <Property Name="Werks" Type="Edm.String" MaxLength="4" sap:unicode="false"/>
+                <Property Name="PSTYP" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="BWART" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="LGORT" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="Lifnr" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="Letyp" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="Expdt" Type="Edm.String" MaxLength="8" sap:unicode="false"/>
+                <Property Name="Mfgdt" Type="Edm.String" MaxLength="8" sap:unicode="false"/>
+                <Property Name="Licha" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="Charg" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="Erfmg" Type="Edm.Decimal" Precision="31" Scale="0" sap:unicode="false"/>
+                <Property Name="Kzbew" Type="Edm.String" MaxLength="10" sap:unicode="false"/>
+                <Property Name="Bldat" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Time Stamp"/>
+                <Property Name="Budat" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Time Stamp"/>
+                <Property Name="Bktxt" Type="Edm.String" MaxLength="25" sap:unicode="false"/>
+                <Property Name="Labst" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="Vmins" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="Speme" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="Mblnr" Type="Edm.String" MaxLength="25" sap:unicode="false"/>
+                <Property Name="Frbnr" Type="Edm.String" MaxLength="16" sap:unicode="false"/>
+                <Property Name="Xabln" Type="Edm.String" MaxLength="10" sap:unicode="false"/>
+                <Property Name="Xblnr" Type="Edm.String" MaxLength="16" sap:unicode="false"/>
+                <Property Name="MB_Insmk" Type="Edm.String" MaxLength="1" sap:unicode="false"/>
+                <Property Name="item_text" Type="Edm.String" sap:unicode="false"/>
+            </EntityType>
+            <EntityType Name="IN_PRINT_PO" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Mblnr"/>
+                </Key>
+                <Property Name="Mblnr" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false"/>
+                <Property Name="Lifnr" Type="Edm.String" MaxLength="10" sap:unicode="false"/>
+                <Property Name="Mcod1" Type="Edm.String" MaxLength="25" sap:unicode="false"/>
+                <Property Name="Budat_Mkpf" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Posting Date"/>
+                <Property Name="Matnr" Type="Edm.String" MaxLength="40" sap:unicode="false"/>
+                <Property Name="Maktg" Type="Edm.String" MaxLength="40" sap:unicode="false"/>
+                <Property Name="Ebeln" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="Ebelp" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="Charg" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="Qprint" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="Qreprint" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="Werks" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="Lgort" Type="Edm.String" sap:unicode="false"/>
+            </EntityType>
+            <EntityType Name="IN_PO_HEADER" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Ebeln"/>
+                </Key>
+                <Property Name="Ebelp" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false"/>
+                <Property Name="Txz01" Type="Edm.String" MaxLength="40" sap:unicode="false"/>
+                <Property Name="Matnr" Type="Edm.String" MaxLength="40" sap:unicode="false"/>
+                <Property Name="Menge" Type="Edm.Decimal" Precision="13" Scale="3" sap:unicode="false"/>
+                <Property Name="Ebeln" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false"/>
+            </EntityType>
+            <EntityType Name="IN_PO" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Ebeln"/>
+                </Key>
+                <Property Name="Ebeln" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false"/>
+                <Property Name="Bsart" Type="Edm.String" MaxLength="20" sap:unicode="false"/>
+                <Property Name="Bstyp" Type="Edm.String" MaxLength="20" sap:unicode="false"/>
+                <Property Name="Name1" Type="Edm.String" MaxLength="20" sap:unicode="false"/>
+                <Property Name="Lifnr" Type="Edm.String" MaxLength="20" sap:unicode="false"/>
+                <Property Name="Aedat" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Date"/>
+                <Property Name="Werks" Type="Edm.String" MaxLength="10" sap:unicode="false"/>
+                <Property Name="Mblnr" Type="Edm.String" MaxLength="10" sap:unicode="false"/>
+                <Property Name="bill_of_ladding" Type="Edm.String" MaxLength="16" sap:unicode="false"/>
+                <Property Name="gr_gi_slip_no" Type="Edm.String" MaxLength="10" sap:unicode="false"/>
+                <Property Name="header_txt" Type="Edm.String" MaxLength="25" sap:unicode="false"/>
+                <NavigationProperty Name="Navg_Po" Relationship="ZCIMS_INT_SRV.Assoc_HeaderItem_Po" FromRole="FromRole_Assoc_HeaderItem_Po" ToRole="ToRole_Assoc_HeaderItem_Po"/>
+            </EntityType>
+            <EntityType Name="Int_phy_inv" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="matnr"/>
+                </Key>
+                <Property Name="matnr" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false"/>
+                <Property Name="lgort" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="charg" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="clabs" Type="Edm.Decimal" Precision="31" Scale="0" sap:unicode="false"/>
+                <Property Name="cinsm" Type="Edm.Decimal" Precision="31" Scale="0" sap:unicode="false"/>
+                <Property Name="cspem" Type="Edm.Decimal" Precision="31" Scale="0" sap:unicode="false"/>
+                <Property Name="maktx" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="zr_stock" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="cntd_stock" Type="Edm.Decimal" Precision="31" Scale="0" sap:unicode="false"/>
+                <Property Name="status" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="werks" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="diff" Type="Edm.Decimal" Precision="31" Scale="0" sap:unicode="false"/>
+                <Property Name="bname" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="zdate" Type="Edm.DateTime" Precision="0" sap:unicode="false" sap:label="Date"/>
+                <Property Name="ztime" Type="Edm.Time" Precision="0" sap:unicode="false" sap:label="Field of type TIMS"/>
+                <NavigationProperty Name="npo_phy" Relationship="ZCIMS_INT_SRV.Assoc_phy" FromRole="FromRole_Assoc_phy" ToRole="ToRole_Assoc_phy"/>
+            </EntityType>
+            <EntityType Name="IN_PRINT_MEDIA" m:HasStream="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Mblnr"/>
+                    <PropertyRef Name="ebeln"/>
+                    <PropertyRef Name="Ebelp"/>
+                    <PropertyRef Name="Matnr"/>
+                    <PropertyRef Name="Charg"/>
+                    <PropertyRef Name="Mcod1"/>
+                    <PropertyRef Name="Maktx"/>
+                    <PropertyRef Name="meins"/>
+                    <PropertyRef Name="Lenum"/>
+                </Key>
+                <Property Name="Mblnr" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false"/>
+                <Property Name="ebeln" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false"/>
+                <Property Name="Ebelp" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false"/>
+                <Property Name="Matnr" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false"/>
+                <Property Name="Charg" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false"/>
+                <Property Name="menge" Type="Edm.Decimal" Precision="31" Scale="0" sap:unicode="false"/>
+                <Property Name="Budat_Mkpf" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Time Stamp"/>
+                <Property Name="Mcod1" Type="Edm.String" Nullable="false" MaxLength="25" sap:unicode="false"/>
+                <Property Name="Lifnr" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="Qprint" Type="Edm.String" MaxLength="1" sap:unicode="false"/>
+                <Property Name="Qreprint" Type="Edm.String" MaxLength="1" sap:unicode="false"/>
+                <Property Name="Maktx" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false"/>
+                <Property Name="Repres" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="Lsize" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="Lgort" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="Werks" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="mjahr" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="meins" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false"/>
+                <Property Name="Lenum" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false"/>
+            </EntityType>
+            <EntityType Name="OUT_PICKING1" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Vbeln"/>
+                </Key>
+                <Property Name="Vbeln" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false"/>
+                <Property Name="Name1" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="Lgort" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="Vbtyp" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="auart" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="Kunnr" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="erdat" Type="Edm.DateTime" Precision="0" sap:unicode="false" sap:label="Date"/>
+                <Property Name="charg" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="clabs" Type="Edm.Decimal" Precision="31" Scale="0" sap:unicode="false"/>
+                <Property Name="hsdat" Type="Edm.DateTime" Precision="0" sap:unicode="false" sap:label="Date"/>
+                <Property Name="vfdat" Type="Edm.DateTime" Precision="0" sap:unicode="false" sap:label="Date"/>
+                <Property Name="matnr" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="arktx" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="lfgsk" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="delivery" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="posnr" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="lfimg" Type="Edm.Decimal" Precision="31" Scale="0" sap:unicode="false"/>
+                <Property Name="posnn" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="pikmg" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="lgmng" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="werks" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="kwmeng" Type="Edm.Decimal" Precision="31" Scale="0" sap:unicode="false"/>
+                <Property Name="vstel" Type="Edm.String" sap:unicode="false"/>
+            </EntityType>
+            <EntityType Name="Int_phy_inv_post" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="matnr"/>
+                </Key>
+                <Property Name="matnr" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false"/>
+                <Property Name="werks" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="zdate" Type="Edm.DateTime" Precision="0" sap:unicode="false" sap:label="Date"/>
+                <Property Name="ztime" Type="Edm.Time" Precision="0" sap:unicode="false" sap:label="Field of type TIMS"/>
+                <Property Name="lgort" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="charg" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="maktx" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="clabs" Type="Edm.Decimal" Precision="31" Scale="0" sap:unicode="false"/>
+                <Property Name="cinsm" Type="Edm.Decimal" Precision="31" Scale="0" sap:unicode="false"/>
+                <Property Name="cspem" Type="Edm.Decimal" Precision="31" Scale="0" sap:unicode="false"/>
+                <Property Name="cntd_stock" Type="Edm.Decimal" Precision="31" Scale="0" sap:unicode="false"/>
+                <Property Name="diff" Type="Edm.Decimal" Precision="31" Scale="0" sap:unicode="false"/>
+                <Property Name="bname" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="status" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="zr_stock" Type="Edm.String" sap:unicode="false"/>
+            </EntityType>
+            <EntityType Name="OUT_GI_SCRAP" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="matnr"/>
+                </Key>
+                <Property Name="matnr" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false"/>
+                <Property Name="lgort" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="charg" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="erfmg" Type="Edm.Decimal" Precision="31" Scale="0" sap:unicode="false"/>
+                <Property Name="kostl" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="grund" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="maktx" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="comp_code" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="mblnr" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="message" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="meins" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="werks" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="clabs" Type="Edm.Decimal" Precision="31" Scale="0" sap:unicode="false"/>
+                <Property Name="bukrs" Type="Edm.String" sap:unicode="false"/>
+                <NavigationProperty Name="npo_scrap" Relationship="ZCIMS_INT_SRV.Assoc_GI_Scrap" FromRole="FromRole_Assoc_GI_Scrap" ToRole="ToRole_Assoc_GI_Scrap"/>
+            </EntityType>
+            <EntityType Name="Int_Sloc_To_Sloc" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="matnr"/>
+                </Key>
+                <Property Name="rsnum" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="xwaok" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="bdart" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="matnr" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false"/>
+                <Property Name="maktx" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="bwart" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="rsdat" Type="Edm.DateTime" Precision="0" sap:unicode="false" sap:label="Date"/>
+                <Property Name="rspos" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="charg" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="sgtxt" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="umlgo" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="lgort" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="mblnr" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="entry_qnt" Type="Edm.Decimal" Precision="31" Scale="0" sap:unicode="false"/>
+                <Property Name="move_mat" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="move_plant" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="move_stloc" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="move_batch" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="erfmg" Type="Edm.Decimal" Precision="31" Scale="0" sap:unicode="false"/>
+                <Property Name="meins" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="message" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="werks" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="clabs" Type="Edm.Decimal" Precision="31" Scale="0" sap:unicode="false"/>
+                <Property Name="umwrk" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="kzear" Type="Edm.String" sap:unicode="false"/>
+                <NavigationProperty Name="npo_sloc" Relationship="ZCIMS_INT_SRV.Assoc_sloc" FromRole="FromRole_Assoc_sloc" ToRole="ToRole_Assoc_sloc"/>
+            </EntityType>
+            <EntityType Name="Int_phy_valid" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="lgort"/>
+                </Key>
+                <Property Name="lgort" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false"/>
+                <Property Name="werks" Type="Edm.String" sap:unicode="false"/>
+            </EntityType>
+            <EntityType Name="Out_GI_reservation" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="matnr"/>
+                </Key>
+                <Property Name="matnr" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false"/>
+                <Property Name="maktx" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="rsnum" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="xwaok" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="bdart" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="bwart" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="kostl" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="anln1" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="ps_psp_pnr" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="rsdat" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Date"/>
+                <Property Name="rspos" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="lgort" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="erfmg" Type="Edm.Decimal" Precision="31" Scale="0" sap:unicode="false"/>
+                <Property Name="sgtxt" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="charg" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="mblnr" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="meins" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="message" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="werks" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="clabs" Type="Edm.Decimal" Precision="31" Scale="0" sap:unicode="false"/>
+                <Property Name="kzear" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="entry_qnt" Type="Edm.Decimal" Precision="31" Scale="0" sap:unicode="false"/>
+                <NavigationProperty Name="npo_resv" Relationship="ZCIMS_INT_SRV.Assoc_GI_Reservation" FromRole="FromRole_Assoc_GI_Reservation" ToRole="ToRole_Assoc_GI_Reservation"/>
+            </EntityType>
+            <EntityType Name="Int_Sloc_valid" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="matnr"/>
+                </Key>
+                <Property Name="rsnum" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="xwaok" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="bdart" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="matnr" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false"/>
+                <Property Name="maktx" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="bwart" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="rsdat" Type="Edm.DateTime" Precision="0" sap:unicode="false" sap:label="Date"/>
+                <Property Name="rspos" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="charg" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="sgtxt" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="umlgo" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="lgort" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="mblnr" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="entry_qnt" Type="Edm.Decimal" Precision="31" Scale="0" sap:unicode="false"/>
+                <Property Name="move_mat" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="move_plant" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="move_stloc" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="move_batch" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="erfmg" Type="Edm.Decimal" Precision="31" Scale="0" sap:unicode="false"/>
+                <Property Name="meins" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="message" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="werks" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="clabs" Type="Edm.Decimal" Precision="31" Scale="0" sap:unicode="false"/>
+                <Property Name="umwrk" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="kzear" Type="Edm.String" sap:unicode="false"/>
+            </EntityType>
+            <EntityType Name="OUT_GI_SO" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="vbeln"/>
+                </Key>
+                <Property Name="vbeln" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false"/>
+                <Property Name="vbtyp" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="lfdat" Type="Edm.DateTime" Precision="0" sap:unicode="false" sap:label="Date"/>
+                <Property Name="kunnr" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="kostk" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="lfart" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="name1" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="posnr" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="matnr" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="arktx" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="vbelv" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="posnv" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="vbtyp_n" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="rfmng" Type="Edm.Decimal" Precision="31" Scale="0" sap:unicode="false"/>
+                <Property Name="bolnr" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="delivery" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="mblnr" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="werks" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="wbsta" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="lfimg" Type="Edm.Decimal" Precision="31" Scale="0" sap:unicode="false"/>
+                <NavigationProperty Name="npo_gi" Relationship="ZCIMS_INT_SRV.Assoc_GI_so" FromRole="FromRole_Assoc_GI_so" ToRole="ToRole_Assoc_GI_so"/>
+            </EntityType>
+            <EntityType Name="Login_Srv" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="USERID"/>
+                </Key>
+                <Property Name="USERID" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false"/>
+                <Property Name="COMP_CODE" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="WERKS" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="STR_LOC" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="ACTIVEUSER" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="SALES_ORG" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="SALES_DIVISION" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="SHIP_PT" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="RECV_PT" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="PURCH_ORG" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="PURCH_GRP" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="CAMERA_SCAN" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="RFID_SCAN" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="LASER_SCAN" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="MULTI_BARCODE_SCAN" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="ZPRINT" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="REPRINT" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="PRINTER_TYPE" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="PRINTER_MAC_ID" Type="Edm.String" sap:unicode="false"/>
+            </EntityType>
+            <EntityType Name="IN_STOCK_OVW" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="matnr"/>
+                </Key>
+                <Property Name="matnr" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false"/>
+                <Property Name="maktx" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="charg" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="lgort" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="werks" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="clabs" Type="Edm.Decimal" Precision="31" Scale="0" sap:unicode="false"/>
+                <Property Name="cinsm" Type="Edm.Decimal" Precision="31" Scale="0" sap:unicode="false"/>
+                <Property Name="cspem" Type="Edm.Decimal" Precision="31" Scale="0" sap:unicode="false"/>
+            </EntityType>
+            <EntityType Name="INT_mattomat" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="matnr"/>
+                </Key>
+                <Property Name="matnr" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false"/>
+                <Property Name="maktx" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="charg" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="lgort" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="mblnr" Type="Edm.String" MaxLength="25" sap:unicode="false"/>
+                <Property Name="meins" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="move_mat" Type="Edm.String" MaxLength="25" sap:unicode="false"/>
+                <Property Name="move_plant" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="move_stloc" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="move_batch" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="message" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="erfmg" Type="Edm.Decimal" Precision="31" Scale="0" sap:unicode="false"/>
+                <Property Name="werks" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="clabs" Type="Edm.Decimal" Precision="31" Scale="0" sap:unicode="false"/>
+                <NavigationProperty Name="npo_mtom" Relationship="ZCIMS_INT_SRV.assoc_mattomat" FromRole="FromRole_assoc_mattomat" ToRole="ToRole_assoc_mattomat"/>
+            </EntityType>
+            <EntityType Name="IN_REPRINT_PO" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Mblnr"/>
+                </Key>
+                <Property Name="Mblnr" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false"/>
+                <Property Name="Mcod1" Type="Edm.String" MaxLength="25" sap:unicode="false"/>
+                <Property Name="Budat_Mkpf" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Posting Date"/>
+                <Property Name="RREASON" Type="Edm.String" MaxLength="40" sap:unicode="false"/>
+                <Property Name="Ebeln" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="Ebelp" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="Matnr" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="Charg" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="Menge" Type="Edm.Decimal" Precision="31" Scale="0" sap:unicode="false"/>
+                <Property Name="Lifnr" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="Edate" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Created on"/>
+                <Property Name="Qprint" Type="Edm.String" MaxLength="1" sap:unicode="false"/>
+            </EntityType>
+            <EntityType Name="IN_REPRINT_RSN" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="SRNO"/>
+                </Key>
+                <Property Name="SRNO" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false"/>
+                <Property Name="RREASON" Type="Edm.String" MaxLength="40" sap:unicode="false"/>
+            </EntityType>
+            <EntityType Name="IN_PRINT_PO_ITEM" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Mblnr"/>
+                </Key>
+                <Property Name="Mblnr" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false"/>
+                <Property Name="Ebeln" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="Ebelp" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="Matnr" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="Charg" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="menge" Type="Edm.Decimal" Precision="31" Scale="0" sap:unicode="false"/>
+                <Property Name="Budat_Mkpf" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Posting Date"/>
+                <Property Name="Mcod1" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="Lifnr" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="Qprint" Type="Edm.String" MaxLength="1" sap:unicode="false"/>
+                <Property Name="Qreprint" Type="Edm.String" MaxLength="1" sap:unicode="false"/>
+                <Property Name="Maktx" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="Repres" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="Lsize" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="Lgort" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="Werks" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="mjahr" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="meins" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="sgtxt" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="vfdat" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="Date"/>
+                <NavigationProperty Name="Navg_Pr" Relationship="ZCIMS_INT_SRV.Assoc_PrtHeadToItem" FromRole="FromRole_Assoc_PrtHeadToItem" ToRole="ToRole_Assoc_PrtHeadToItem"/>
+            </EntityType>
+            <EntityType Name="OUT_PICKING" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Vbeln"/>
+                </Key>
+                <Property Name="Vbeln" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false"/>
+                <Property Name="Name1" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="Lgort" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="Vbtyp" Type="Edm.String" MaxLength="4" sap:unicode="false"/>
+                <Property Name="auart" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="Kunnr" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="erdat" Type="Edm.DateTime" Precision="0" sap:unicode="false" sap:label="Date"/>
+                <Property Name="charg" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="clabs" Type="Edm.Decimal" Precision="31" Scale="0" sap:unicode="false"/>
+                <Property Name="hsdat" Type="Edm.DateTime" Precision="0" sap:unicode="false" sap:label="Date"/>
+                <Property Name="vfdat" Type="Edm.DateTime" Precision="0" sap:unicode="false" sap:label="Date"/>
+                <Property Name="matnr" Type="Edm.String" MaxLength="18" sap:unicode="false"/>
+                <Property Name="arktx" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="lfgsk" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="delivery" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="posnr" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="lfimg" Type="Edm.Decimal" Precision="31" Scale="0" sap:unicode="false"/>
+                <Property Name="posnn" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="pikmg" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="lgmng" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="werks" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="kwmeng" Type="Edm.Decimal" Precision="31" Scale="0" sap:unicode="false"/>
+                <Property Name="vstel" Type="Edm.String" sap:unicode="false"/>
+                <NavigationProperty Name="npo_picking" Relationship="ZCIMS_INT_SRV.Assoc_Picking_SO" FromRole="FromRole_Assoc_Picking_SO" ToRole="ToRole_Assoc_Picking_SO"/>
+            </EntityType>
+            <EntityType Name="INT_mtom_chargvalid" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="matnr"/>
+                </Key>
+                <Property Name="matnr" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false"/>
+                <Property Name="maktx" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="charg" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="lgort" Type="Edm.String" sap:unicode="false"/>
+            </EntityType>
+            <EntityType Name="IN_PO_StLoc" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Werks"/>
+                </Key>
+                <Property Name="Werks" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Plant"/>
+                <Property Name="Lgort" Type="Edm.String" MaxLength="4" sap:unicode="false" sap:label="Stor. Loc."/>
+                <Property Name="Labst" Type="Edm.Decimal" Precision="13" Scale="3" sap:unicode="false" sap:label="Unrestricted"/>
+            </EntityType>
+            <EntityType Name="INT_mattomat_se" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="matnr"/>
+                </Key>
+                <Property Name="matnr" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false"/>
+                <Property Name="mtart" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="maktx" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="charg" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="meins" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="lgort" Type="Edm.String" sap:unicode="false"/>
+            </EntityType>
+            <Association Name="Assoc_GI_Scrap" sap:content-version="1">
+                <End Type="ZCIMS_INT_SRV.OUT_GI_SCRAP" Multiplicity="1" Role="FromRole_Assoc_GI_Scrap"/>
+                <End Type="ZCIMS_INT_SRV.OUT_GI_SCRAP" Multiplicity="*" Role="ToRole_Assoc_GI_Scrap"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_Assoc_GI_Scrap">
+                        <PropertyRef Name="matnr"/>
+                    </Principal>
+                    <Dependent Role="ToRole_Assoc_GI_Scrap">
+                        <PropertyRef Name="matnr"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="assoc_mattomat" sap:content-version="1">
+                <End Type="ZCIMS_INT_SRV.INT_mattomat" Multiplicity="1" Role="FromRole_assoc_mattomat"/>
+                <End Type="ZCIMS_INT_SRV.INT_mattomat" Multiplicity="*" Role="ToRole_assoc_mattomat"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_assoc_mattomat">
+                        <PropertyRef Name="matnr"/>
+                    </Principal>
+                    <Dependent Role="ToRole_assoc_mattomat">
+                        <PropertyRef Name="matnr"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="Assoc_GI_so" sap:content-version="1">
+                <End Type="ZCIMS_INT_SRV.OUT_GI_SO" Multiplicity="1" Role="FromRole_Assoc_GI_so"/>
+                <End Type="ZCIMS_INT_SRV.OUT_GI_SO" Multiplicity="*" Role="ToRole_Assoc_GI_so"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_Assoc_GI_so">
+                        <PropertyRef Name="vbeln"/>
+                    </Principal>
+                    <Dependent Role="ToRole_Assoc_GI_so">
+                        <PropertyRef Name="vbeln"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="Assoc_phy" sap:content-version="1">
+                <End Type="ZCIMS_INT_SRV.Int_phy_inv" Multiplicity="1" Role="FromRole_Assoc_phy"/>
+                <End Type="ZCIMS_INT_SRV.Int_phy_inv" Multiplicity="*" Role="ToRole_Assoc_phy"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_Assoc_phy">
+                        <PropertyRef Name="matnr"/>
+                    </Principal>
+                    <Dependent Role="ToRole_Assoc_phy">
+                        <PropertyRef Name="matnr"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="Assoc_GI_Reservation" sap:content-version="1">
+                <End Type="ZCIMS_INT_SRV.Out_GI_reservation" Multiplicity="1" Role="FromRole_Assoc_GI_Reservation"/>
+                <End Type="ZCIMS_INT_SRV.Out_GI_reservation" Multiplicity="*" Role="ToRole_Assoc_GI_Reservation"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_Assoc_GI_Reservation">
+                        <PropertyRef Name="matnr"/>
+                    </Principal>
+                    <Dependent Role="ToRole_Assoc_GI_Reservation">
+                        <PropertyRef Name="matnr"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="Assoc_RF_MATTAG" sap:content-version="1">
+                <End Type="ZCIMS_INT_SRV.RF_MATTAG" Multiplicity="1" Role="FromRole_Assoc_RF_MATTAG"/>
+                <End Type="ZCIMS_INT_SRV.RF_MATTAG" Multiplicity="*" Role="ToRole_Assoc_RF_MATTAG"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_Assoc_RF_MATTAG">
+                        <PropertyRef Name="tag_id"/>
+                    </Principal>
+                    <Dependent Role="ToRole_Assoc_RF_MATTAG">
+                        <PropertyRef Name="tag_id"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="Assoc_Picking_SO" sap:content-version="1">
+                <End Type="ZCIMS_INT_SRV.OUT_PICKING" Multiplicity="1" Role="FromRole_Assoc_Picking_SO"/>
+                <End Type="ZCIMS_INT_SRV.OUT_PICKING" Multiplicity="*" Role="ToRole_Assoc_Picking_SO"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_Assoc_Picking_SO">
+                        <PropertyRef Name="Vbeln"/>
+                    </Principal>
+                    <Dependent Role="ToRole_Assoc_Picking_SO">
+                        <PropertyRef Name="Vbeln"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="Assoc_HeaderItem_Po" sap:content-version="1">
+                <End Type="ZCIMS_INT_SRV.IN_PO" Multiplicity="1" Role="FromRole_Assoc_HeaderItem_Po"/>
+                <End Type="ZCIMS_INT_SRV.IN_PO_ITEM" Multiplicity="*" Role="ToRole_Assoc_HeaderItem_Po"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_Assoc_HeaderItem_Po">
+                        <PropertyRef Name="Ebeln"/>
+                    </Principal>
+                    <Dependent Role="ToRole_Assoc_HeaderItem_Po">
+                        <PropertyRef Name="Ebeln"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="Assoc_mat_details" sap:content-version="1">
+                <End Type="ZCIMS_INT_SRV.Mat_details" Multiplicity="1" Role="FromRole_Assoc_mat_details"/>
+                <End Type="ZCIMS_INT_SRV.Mat_details" Multiplicity="*" Role="ToRole_Assoc_mat_details"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_Assoc_mat_details">
+                        <PropertyRef Name="mblnr"/>
+                    </Principal>
+                    <Dependent Role="ToRole_Assoc_mat_details">
+                        <PropertyRef Name="mblnr"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="Assoc_PrtHeadToItem" sap:content-version="1">
+                <End Type="ZCIMS_INT_SRV.IN_PRINT_PO_ITEM" Multiplicity="1" Role="FromRole_Assoc_PrtHeadToItem"/>
+                <End Type="ZCIMS_INT_SRV.IN_PRINT_PO_ITEM" Multiplicity="*" Role="ToRole_Assoc_PrtHeadToItem"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_Assoc_PrtHeadToItem">
+                        <PropertyRef Name="Mblnr"/>
+                    </Principal>
+                    <Dependent Role="ToRole_Assoc_PrtHeadToItem">
+                        <PropertyRef Name="Mblnr"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="Assoc_sloc" sap:content-version="1">
+                <End Type="ZCIMS_INT_SRV.Int_Sloc_To_Sloc" Multiplicity="1" Role="FromRole_Assoc_sloc"/>
+                <End Type="ZCIMS_INT_SRV.Int_Sloc_To_Sloc" Multiplicity="*" Role="ToRole_Assoc_sloc"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_Assoc_sloc">
+                        <PropertyRef Name="matnr"/>
+                    </Principal>
+                    <Dependent Role="ToRole_Assoc_sloc">
+                        <PropertyRef Name="matnr"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityContainer Name="ZCIMS_INT_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="RF_MATTAGSet" EntityType="ZCIMS_INT_SRV.RF_MATTAG" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="Mat_detailsSet" EntityType="ZCIMS_INT_SRV.Mat_details" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="IN_PO_ITEMSet" EntityType="ZCIMS_INT_SRV.IN_PO_ITEM" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="IN_PRINT_POSet" EntityType="ZCIMS_INT_SRV.IN_PRINT_PO" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="IN_PO_HEADERSet" EntityType="ZCIMS_INT_SRV.IN_PO_HEADER" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="IN_POSet" EntityType="ZCIMS_INT_SRV.IN_PO" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="Int_phy_invSet" EntityType="ZCIMS_INT_SRV.Int_phy_inv" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="IN_PRINT_MEDIASet" EntityType="ZCIMS_INT_SRV.IN_PRINT_MEDIA" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="OUT_PICKING1Set" EntityType="ZCIMS_INT_SRV.OUT_PICKING1" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="Int_phy_inv_postSet" EntityType="ZCIMS_INT_SRV.Int_phy_inv_post" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="OUT_GI_SCRAPSet" EntityType="ZCIMS_INT_SRV.OUT_GI_SCRAP" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="Int_Sloc_To_SlocSet" EntityType="ZCIMS_INT_SRV.Int_Sloc_To_Sloc" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="Int_phy_validSet" EntityType="ZCIMS_INT_SRV.Int_phy_valid" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="Out_GI_reservationSet" EntityType="ZCIMS_INT_SRV.Out_GI_reservation" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="Int_Sloc_validSet" EntityType="ZCIMS_INT_SRV.Int_Sloc_valid" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="OUT_GI_SOSet" EntityType="ZCIMS_INT_SRV.OUT_GI_SO" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="Login_SrvSet" EntityType="ZCIMS_INT_SRV.Login_Srv" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="IN_STOCK_OVWSet" EntityType="ZCIMS_INT_SRV.IN_STOCK_OVW" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="INT_mattomatSet" EntityType="ZCIMS_INT_SRV.INT_mattomat" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="IN_REPRINT_POSet" EntityType="ZCIMS_INT_SRV.IN_REPRINT_PO" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="IN_REPRINT_RSNSet" EntityType="ZCIMS_INT_SRV.IN_REPRINT_RSN" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="IN_PRINT_PO_ITEMSet" EntityType="ZCIMS_INT_SRV.IN_PRINT_PO_ITEM" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="OUT_PICKINGSet" EntityType="ZCIMS_INT_SRV.OUT_PICKING" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="INT_mtom_chargvalidSet" EntityType="ZCIMS_INT_SRV.INT_mtom_chargvalid" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="IN_PO_StLocSet" EntityType="ZCIMS_INT_SRV.IN_PO_StLoc" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="INT_mattomat_seSet" EntityType="ZCIMS_INT_SRV.INT_mattomat_se" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <AssociationSet Name="Assoc_GI_ScrapSet" Association="ZCIMS_INT_SRV.Assoc_GI_Scrap" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="OUT_GI_SCRAPSet" Role="FromRole_Assoc_GI_Scrap"/>
+                    <End EntitySet="OUT_GI_SCRAPSet" Role="ToRole_Assoc_GI_Scrap"/>
+                </AssociationSet>
+                <AssociationSet Name="Assoc_Picking_SOSet" Association="ZCIMS_INT_SRV.Assoc_Picking_SO" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="OUT_PICKINGSet" Role="FromRole_Assoc_Picking_SO"/>
+                    <End EntitySet="OUT_PICKINGSet" Role="ToRole_Assoc_Picking_SO"/>
+                </AssociationSet>
+                <AssociationSet Name="Assoc_mat_detailsSet" Association="ZCIMS_INT_SRV.Assoc_mat_details" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="Mat_detailsSet" Role="FromRole_Assoc_mat_details"/>
+                    <End EntitySet="Mat_detailsSet" Role="ToRole_Assoc_mat_details"/>
+                </AssociationSet>
+                <AssociationSet Name="Assoc_HeaderItem_Po_AssocSet" Association="ZCIMS_INT_SRV.Assoc_HeaderItem_Po" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="IN_POSet" Role="FromRole_Assoc_HeaderItem_Po"/>
+                    <End EntitySet="IN_PO_ITEMSet" Role="ToRole_Assoc_HeaderItem_Po"/>
+                </AssociationSet>
+                <AssociationSet Name="Assoc_RF_MATTAGSet" Association="ZCIMS_INT_SRV.Assoc_RF_MATTAG" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="RF_MATTAGSet" Role="FromRole_Assoc_RF_MATTAG"/>
+                    <End EntitySet="RF_MATTAGSet" Role="ToRole_Assoc_RF_MATTAG"/>
+                </AssociationSet>
+                <AssociationSet Name="Assoc_slocSet" Association="ZCIMS_INT_SRV.Assoc_sloc" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="Int_Sloc_To_SlocSet" Role="FromRole_Assoc_sloc"/>
+                    <End EntitySet="Int_Sloc_To_SlocSet" Role="ToRole_Assoc_sloc"/>
+                </AssociationSet>
+                <AssociationSet Name="Assoc_GI_soSet" Association="ZCIMS_INT_SRV.Assoc_GI_so" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="OUT_GI_SOSet" Role="FromRole_Assoc_GI_so"/>
+                    <End EntitySet="OUT_GI_SOSet" Role="ToRole_Assoc_GI_so"/>
+                </AssociationSet>
+                <AssociationSet Name="Assoc_PrtHeadToItemSet" Association="ZCIMS_INT_SRV.Assoc_PrtHeadToItem" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="IN_PRINT_PO_ITEMSet" Role="FromRole_Assoc_PrtHeadToItem"/>
+                    <End EntitySet="IN_PRINT_PO_ITEMSet" Role="ToRole_Assoc_PrtHeadToItem"/>
+                </AssociationSet>
+                <AssociationSet Name="Assoc_GI_ReservationSet" Association="ZCIMS_INT_SRV.Assoc_GI_Reservation" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="Out_GI_reservationSet" Role="FromRole_Assoc_GI_Reservation"/>
+                    <End EntitySet="Out_GI_reservationSet" Role="ToRole_Assoc_GI_Reservation"/>
+                </AssociationSet>
+                <AssociationSet Name="Assoc_phySet" Association="ZCIMS_INT_SRV.Assoc_phy" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="Int_phy_invSet" Role="FromRole_Assoc_phy"/>
+                    <End EntitySet="Int_phy_invSet" Role="ToRole_Assoc_phy"/>
+                </AssociationSet>
+                <AssociationSet Name="assoc_mattomatSet" Association="ZCIMS_INT_SRV.assoc_mattomat" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="INT_mattomatSet" Role="FromRole_assoc_mattomat"/>
+                    <End EntitySet="INT_mattomatSet" Role="ToRole_assoc_mattomat"/>
+                </AssociationSet>
+            </EntityContainer>
+            <atom:link rel="self" href="http://192.168.1.201:8002/sap/opu/odata/sap/ZCIMS_INT_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="http://192.168.1.201:8002/sap/opu/odata/sap/ZCIMS_INT_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

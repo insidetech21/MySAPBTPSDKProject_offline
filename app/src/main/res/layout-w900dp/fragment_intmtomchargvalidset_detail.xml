@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".mdui.intmtomchargvalidset.INTMtomChargvalidSetActivity">
+    <data>
+        <import type = "com.sap.cloud.android.odata.zcims_int_srv_entities.INTMtomChargvalid" />
+        <variable name="intMtomChargvalid" type="INTMtomChargvalid"/>
+        <variable name="handler" type="com.company.mysapbtpsdkproject.mdui.intmtomchargvalidset.INTMtomChargvalidSetDetailFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Matnr"
+            app:valueText="@{intMtomChargvalid.getOptionalValue(INTMtomChargvalid.matnr).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Maktx"
+            app:valueText="@{intMtomChargvalid.getOptionalValue(INTMtomChargvalid.maktx).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Charg"
+            app:valueText="@{intMtomChargvalid.getOptionalValue(INTMtomChargvalid.charg).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Lgort"
+            app:valueText="@{intMtomChargvalid.getOptionalValue(INTMtomChargvalid.lgort).toString()}" />
+
+    </LinearLayout>
+</layout>

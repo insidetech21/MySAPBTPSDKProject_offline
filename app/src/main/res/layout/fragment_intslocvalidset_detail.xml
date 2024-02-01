@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".mdui.intslocvalidset.IntSlocValidSetActivity">
+    <data>
+        <import type = "com.sap.cloud.android.odata.zcims_int_srv_entities.IntSlocValid" />
+        <variable name="intSlocValid" type="IntSlocValid"/>
+        <variable name="handler" type="com.company.mysapbtpsdkproject.mdui.intslocvalidset.IntSlocValidSetDetailFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/item_detail_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Matnr"
+                        app:valueText="@{intSlocValid.getOptionalValue(IntSlocValid.matnr).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Rsnum"
+                        app:valueText="@{intSlocValid.getOptionalValue(IntSlocValid.rsnum).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Xwaok"
+                        app:valueText="@{intSlocValid.getOptionalValue(IntSlocValid.xwaok).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Bdart"
+                        app:valueText="@{intSlocValid.getOptionalValue(IntSlocValid.bdart).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Maktx"
+                        app:valueText="@{intSlocValid.getOptionalValue(IntSlocValid.maktx).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Bwart"
+                        app:valueText="@{intSlocValid.getOptionalValue(IntSlocValid.bwart).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Rsdat"
+                        app:valueText="@{intSlocValid.getOptionalValue(IntSlocValid.rsdat).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Rspos"
+                        app:valueText="@{intSlocValid.getOptionalValue(IntSlocValid.rspos).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Charg"
+                        app:valueText="@{intSlocValid.getOptionalValue(IntSlocValid.charg).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Sgtxt"
+                        app:valueText="@{intSlocValid.getOptionalValue(IntSlocValid.sgtxt).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Umlgo"
+                        app:valueText="@{intSlocValid.getOptionalValue(IntSlocValid.umlgo).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Lgort"
+                        app:valueText="@{intSlocValid.getOptionalValue(IntSlocValid.lgort).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Mblnr"
+                        app:valueText="@{intSlocValid.getOptionalValue(IntSlocValid.mblnr).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="EntryQnt"
+                        app:valueText="@{intSlocValid.getOptionalValue(IntSlocValid.entryQnt).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="MoveMat"
+                        app:valueText="@{intSlocValid.getOptionalValue(IntSlocValid.moveMat).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="MovePlant"
+                        app:valueText="@{intSlocValid.getOptionalValue(IntSlocValid.movePlant).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="MoveStloc"
+                        app:valueText="@{intSlocValid.getOptionalValue(IntSlocValid.moveStloc).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="MoveBatch"
+                        app:valueText="@{intSlocValid.getOptionalValue(IntSlocValid.moveBatch).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Erfmg"
+                        app:valueText="@{intSlocValid.getOptionalValue(IntSlocValid.erfmg).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Meins"
+                        app:valueText="@{intSlocValid.getOptionalValue(IntSlocValid.meins).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Message"
+                        app:valueText="@{intSlocValid.getOptionalValue(IntSlocValid.message).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Werks"
+                        app:valueText="@{intSlocValid.getOptionalValue(IntSlocValid.werks).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Clabs"
+                        app:valueText="@{intSlocValid.getOptionalValue(IntSlocValid.clabs).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Umwrk"
+                        app:valueText="@{intSlocValid.getOptionalValue(IntSlocValid.umwrk).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Kzear"
+                        app:valueText="@{intSlocValid.getOptionalValue(IntSlocValid.kzear).toString()}" />
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </LinearLayout>
+</layout>

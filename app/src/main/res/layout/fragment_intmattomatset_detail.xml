@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".mdui.intmattomatset.INTMattomatSetActivity">
+    <data>
+        <import type = "com.sap.cloud.android.odata.zcims_int_srv_entities.INTMattomat" />
+        <variable name="intMattomat" type="INTMattomat"/>
+        <variable name="handler" type="com.company.mysapbtpsdkproject.mdui.intmattomatset.INTMattomatSetDetailFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/item_detail_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Matnr"
+                        app:valueText="@{intMattomat.getOptionalValue(INTMattomat.matnr).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Maktx"
+                        app:valueText="@{intMattomat.getOptionalValue(INTMattomat.maktx).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Charg"
+                        app:valueText="@{intMattomat.getOptionalValue(INTMattomat.charg).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Lgort"
+                        app:valueText="@{intMattomat.getOptionalValue(INTMattomat.lgort).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Mblnr"
+                        app:valueText="@{intMattomat.getOptionalValue(INTMattomat.mblnr).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Meins"
+                        app:valueText="@{intMattomat.getOptionalValue(INTMattomat.meins).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="MoveMat"
+                        app:valueText="@{intMattomat.getOptionalValue(INTMattomat.moveMat).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="MovePlant"
+                        app:valueText="@{intMattomat.getOptionalValue(INTMattomat.movePlant).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="MoveStloc"
+                        app:valueText="@{intMattomat.getOptionalValue(INTMattomat.moveStloc).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="MoveBatch"
+                        app:valueText="@{intMattomat.getOptionalValue(INTMattomat.moveBatch).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Message"
+                        app:valueText="@{intMattomat.getOptionalValue(INTMattomat.message).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Erfmg"
+                        app:valueText="@{intMattomat.getOptionalValue(INTMattomat.erfmg).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Werks"
+                        app:valueText="@{intMattomat.getOptionalValue(INTMattomat.werks).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Clabs"
+                        app:valueText="@{intMattomat.getOptionalValue(INTMattomat.clabs).toString()}" />
+
+                    <RelativeLayout
+                        style="@style/FioriButton.Flat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:onClick="@{handler::onNavigationClickedToINTMattomatSet_npo_mtom}"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/link_label_to_npo_mtom"
+                            style="@style/FioriButton.Flat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="true"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:paddingLeft="16dp"
+                            android:text="INTMattomatSet" />
+
+                        <Button
+                            android:id="@+id/link_button_to_npo_mtom"
+                            style="@style/FioriButton.Flat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:clickable="false"
+                            android:drawableStart="@drawable/ic_arrow_forward_black_24dp"
+                            android:enabled="true"
+                            android:visibility="invisible"
+                            android:focusable="false" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </LinearLayout>
+</layout>

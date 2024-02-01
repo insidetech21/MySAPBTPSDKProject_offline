@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".mdui.outgiscrapset.OUTGISCRAPSetActivity">
+    <data>
+        <import type = "com.sap.cloud.android.odata.zcims_int_srv_entities.OutGiScrap" />
+        <variable name="outGiScrap" type="OutGiScrap"/>
+        <variable name="handler" type="com.company.mysapbtpsdkproject.mdui.outgiscrapset.OUTGISCRAPSetDetailFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Matnr"
+            app:valueText="@{outGiScrap.getOptionalValue(OutGiScrap.matnr).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Lgort"
+            app:valueText="@{outGiScrap.getOptionalValue(OutGiScrap.lgort).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Charg"
+            app:valueText="@{outGiScrap.getOptionalValue(OutGiScrap.charg).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Erfmg"
+            app:valueText="@{outGiScrap.getOptionalValue(OutGiScrap.erfmg).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Kostl"
+            app:valueText="@{outGiScrap.getOptionalValue(OutGiScrap.kostl).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Grund"
+            app:valueText="@{outGiScrap.getOptionalValue(OutGiScrap.grund).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Maktx"
+            app:valueText="@{outGiScrap.getOptionalValue(OutGiScrap.maktx).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="CompCode"
+            app:valueText="@{outGiScrap.getOptionalValue(OutGiScrap.compCode).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Mblnr"
+            app:valueText="@{outGiScrap.getOptionalValue(OutGiScrap.mblnr).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Message"
+            app:valueText="@{outGiScrap.getOptionalValue(OutGiScrap.message).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Meins"
+            app:valueText="@{outGiScrap.getOptionalValue(OutGiScrap.meins).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Werks"
+            app:valueText="@{outGiScrap.getOptionalValue(OutGiScrap.werks).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Clabs"
+            app:valueText="@{outGiScrap.getOptionalValue(OutGiScrap.clabs).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Bukrs"
+            app:valueText="@{outGiScrap.getOptionalValue(OutGiScrap.bukrs).toString()}" />
+
+        <RelativeLayout
+            style="@style/FioriButton.Flat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:onClick="@{handler::onNavigationClickedToOUTGISCRAPSet_npo_scrap}"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/link_label_to_npo_scrap"
+                style="@style/FioriButton.Flat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:clickable="false"
+                android:focusable="false"
+                android:paddingLeft="16dp"
+                android:text="OUTGISCRAPSet" />
+
+            <Button
+                android:id="@+id/link_button_to_npo_scrap"
+                style="@style/FioriButton.Flat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:clickable="false"
+                android:drawableStart="@drawable/ic_arrow_forward_black_24dp"
+                android:enabled="true"
+                android:visibility="invisible"
+                android:focusable="false" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

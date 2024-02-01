@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".mdui.outgisoset.OUTGISOSetActivity">
+    <data>
+        <import type = "com.sap.cloud.android.odata.zcims_int_srv_entities.OutGiSo" />
+        <variable name="outGiSo" type="OutGiSo"/>
+        <variable name="handler" type="com.company.mysapbtpsdkproject.mdui.outgisoset.OUTGISOSetDetailFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/item_detail_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Vbeln"
+                        app:valueText="@{outGiSo.getOptionalValue(OutGiSo.vbeln).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Vbtyp"
+                        app:valueText="@{outGiSo.getOptionalValue(OutGiSo.vbtyp).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Lfdat"
+                        app:valueText="@{outGiSo.getOptionalValue(OutGiSo.lfdat).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Kunnr"
+                        app:valueText="@{outGiSo.getOptionalValue(OutGiSo.kunnr).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Kostk"
+                        app:valueText="@{outGiSo.getOptionalValue(OutGiSo.kostk).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Lfart"
+                        app:valueText="@{outGiSo.getOptionalValue(OutGiSo.lfart).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Name1"
+                        app:valueText="@{outGiSo.getOptionalValue(OutGiSo.name1).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Posnr"
+                        app:valueText="@{outGiSo.getOptionalValue(OutGiSo.posnr).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Matnr"
+                        app:valueText="@{outGiSo.getOptionalValue(OutGiSo.matnr).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Arktx"
+                        app:valueText="@{outGiSo.getOptionalValue(OutGiSo.arktx).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Vbelv"
+                        app:valueText="@{outGiSo.getOptionalValue(OutGiSo.vbelv).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Posnv"
+                        app:valueText="@{outGiSo.getOptionalValue(OutGiSo.posnv).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="VbtypN"
+                        app:valueText="@{outGiSo.getOptionalValue(OutGiSo.vbtypN).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Rfmng"
+                        app:valueText="@{outGiSo.getOptionalValue(OutGiSo.rfmng).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Bolnr"
+                        app:valueText="@{outGiSo.getOptionalValue(OutGiSo.bolnr).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Delivery"
+                        app:valueText="@{outGiSo.getOptionalValue(OutGiSo.delivery).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Mblnr"
+                        app:valueText="@{outGiSo.getOptionalValue(OutGiSo.mblnr).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Werks"
+                        app:valueText="@{outGiSo.getOptionalValue(OutGiSo.werks).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Wbsta"
+                        app:valueText="@{outGiSo.getOptionalValue(OutGiSo.wbsta).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Lfimg"
+                        app:valueText="@{outGiSo.getOptionalValue(OutGiSo.lfimg).toString()}" />
+
+                    <RelativeLayout
+                        style="@style/FioriButton.Flat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:onClick="@{handler::onNavigationClickedToOUTGISOSet_npo_gi}"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/link_label_to_npo_gi"
+                            style="@style/FioriButton.Flat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="true"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:paddingLeft="16dp"
+                            android:text="OUTGISOSet" />
+
+                        <Button
+                            android:id="@+id/link_button_to_npo_gi"
+                            style="@style/FioriButton.Flat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:clickable="false"
+                            android:drawableStart="@drawable/ic_arrow_forward_black_24dp"
+                            android:enabled="true"
+                            android:visibility="invisible"
+                            android:focusable="false" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </LinearLayout>
+</layout>

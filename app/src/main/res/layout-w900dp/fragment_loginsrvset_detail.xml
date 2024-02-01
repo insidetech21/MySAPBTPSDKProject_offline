@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".mdui.loginsrvset.LoginSrvSetActivity">
+    <data>
+        <import type = "com.sap.cloud.android.odata.zcims_int_srv_entities.LoginSrv" />
+        <variable name="loginSrv" type="LoginSrv"/>
+        <variable name="handler" type="com.company.mysapbtpsdkproject.mdui.loginsrvset.LoginSrvSetDetailFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Userid"
+            app:valueText="@{loginSrv.getOptionalValue(LoginSrv.userid).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="CompCode"
+            app:valueText="@{loginSrv.getOptionalValue(LoginSrv.compCode).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Werks"
+            app:valueText="@{loginSrv.getOptionalValue(LoginSrv.werks).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="StrLoc"
+            app:valueText="@{loginSrv.getOptionalValue(LoginSrv.strLoc).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Activeuser"
+            app:valueText="@{loginSrv.getOptionalValue(LoginSrv.activeuser).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="SalesOrg"
+            app:valueText="@{loginSrv.getOptionalValue(LoginSrv.salesOrg).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="SalesDivision"
+            app:valueText="@{loginSrv.getOptionalValue(LoginSrv.salesDivision).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="ShipPt"
+            app:valueText="@{loginSrv.getOptionalValue(LoginSrv.shipPt).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="RecvPt"
+            app:valueText="@{loginSrv.getOptionalValue(LoginSrv.recvPt).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="PurchOrg"
+            app:valueText="@{loginSrv.getOptionalValue(LoginSrv.purchOrg).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="PurchGrp"
+            app:valueText="@{loginSrv.getOptionalValue(LoginSrv.purchGrp).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="CameraScan"
+            app:valueText="@{loginSrv.getOptionalValue(LoginSrv.cameraScan).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="RfidScan"
+            app:valueText="@{loginSrv.getOptionalValue(LoginSrv.rfidScan).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="LaserScan"
+            app:valueText="@{loginSrv.getOptionalValue(LoginSrv.laserScan).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="MultiBarcodeScan"
+            app:valueText="@{loginSrv.getOptionalValue(LoginSrv.multiBarcodeScan).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Zprint"
+            app:valueText="@{loginSrv.getOptionalValue(LoginSrv.zprint).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Reprint"
+            app:valueText="@{loginSrv.getOptionalValue(LoginSrv.reprint).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="PrinterType"
+            app:valueText="@{loginSrv.getOptionalValue(LoginSrv.printerType).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="PrinterMacId"
+            app:valueText="@{loginSrv.getOptionalValue(LoginSrv.printerMacId).toString()}" />
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".mdui.rfmattagset.RFMATTAGSetActivity">
+    <data>
+        <import type = "com.sap.cloud.android.odata.zcims_int_srv_entities.RfMattag" />
+        <variable name="rfMattag" type="RfMattag"/>
+        <variable name="handler" type="com.company.mysapbtpsdkproject.mdui.rfmattagset.RFMATTAGSetDetailFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/item_detail_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="TagId"
+                        app:valueText="@{rfMattag.getOptionalValue(RfMattag.tagId).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Werks"
+                        app:valueText="@{rfMattag.getOptionalValue(RfMattag.werks).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Mblnr"
+                        app:valueText="@{rfMattag.getOptionalValue(RfMattag.mblnr).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Ebeln"
+                        app:valueText="@{rfMattag.getOptionalValue(RfMattag.ebeln).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="BudatMkpf"
+                        app:valueText="@{rfMattag.getOptionalValue(RfMattag.budatMkpf).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Matnr"
+                        app:valueText="@{rfMattag.getOptionalValue(RfMattag.matnr).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Buzei"
+                        app:valueText="@{rfMattag.getOptionalValue(RfMattag.buzei).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Meins"
+                        app:valueText="@{rfMattag.getOptionalValue(RfMattag.meins).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Menge"
+                        app:valueText="@{rfMattag.getOptionalValue(RfMattag.menge).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Zdate"
+                        app:valueText="@{rfMattag.getOptionalValue(RfMattag.zdate).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Time"
+                        app:valueText="@{rfMattag.getOptionalValue(RfMattag.time).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Userid"
+                        app:valueText="@{rfMattag.getOptionalValue(RfMattag.userid).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Status"
+                        app:valueText="@{rfMattag.getOptionalValue(RfMattag.status).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Maktx"
+                        app:valueText="@{rfMattag.getOptionalValue(RfMattag.maktx).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Bstmg"
+                        app:valueText="@{rfMattag.getOptionalValue(RfMattag.bstmg).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Ebelp"
+                        app:valueText="@{rfMattag.getOptionalValue(RfMattag.ebelp).toString()}" />
+
+                    <RelativeLayout
+                        style="@style/FioriButton.Flat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:onClick="@{handler::onNavigationClickedToRFMATTAGSet_rf_mattag}"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/link_label_to_rf_mattag"
+                            style="@style/FioriButton.Flat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="true"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:paddingLeft="16dp"
+                            android:text="RFMATTAGSet" />
+
+                        <Button
+                            android:id="@+id/link_button_to_rf_mattag"
+                            style="@style/FioriButton.Flat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:clickable="false"
+                            android:drawableStart="@drawable/ic_arrow_forward_black_24dp"
+                            android:enabled="true"
+                            android:visibility="invisible"
+                            android:focusable="false" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </LinearLayout>
+</layout>
